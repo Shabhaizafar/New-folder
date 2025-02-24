@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation(Basic)</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            animation-name: block;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+            /* animation-direction: normal; */
+            /* animation-direction: reverse; */
+            /* animation-direction: alternate; */
+            /* animation-direction: alternate-reverse; */
+            position: relative;
+        }
+        /* Method - 1 */
+        @keyframes block {
+            from{
+                /* margin-left: 0px; */
+                /* transform: translateX(0px); */
+                left: 0px;
+            }
+            to{
+                /* margin-left: 300px; */
+                /* transform: translateX(300px); */
+                left: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

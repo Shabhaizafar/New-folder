@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Object</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            /* box-sizing: border-box; */
+        }
+
+        main{
+            margin: 150px auto;
+            width: 200px;
+            height: 200px;
+            /* border: 1px solid black; */
+            perspective: 100px;
+            box-sizing: border-box;
+        }
+        div{
+            width: 100%;
+            height: 100%;
+            border: 1px solid red;
+            /* transform-style: flat; */
+            transform-style: preserve-3d;
+            transform: translateZ(-200px);
+        }
+        section{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-family: sans-serif;
+            border: 1px solid black;
+            position: absolute;
+            box-sizing: border-box;
+        }
+        .front{
+            background-color: rgba(240, 128, 128, 0.5);
+            transform: translateZ(200px);
+        }
+        .back{
+            background-color: rgba(173, 216, 230, 0.5);
+        }
+        .top{
+            background-color: rgba(144, 238, 144, 0.5);
+            transform: rotateX(90deg);
+            transform-origin: top;
+        }
+        .left{
+            background-color: rgba(255, 160, 122, 0.5);
+            transform: rotateY(90deg) translateZ(-200px);
+            transform-origin: right;
+
+        }
+        .right{
+            background-color: rgba(176, 196, 222, 0.5);
+            transform: rotateY(90deg) ;
+            transform-origin: right;
+        }
+        .bottom{
+            background-color: rgba(135, 206, 250, 0.5);
+            transform: rotateX(90deg) translateY(200px);
+            transform-origin: bottom;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="spin">
+            <section class="front">Front</section>
+            <section class="back">Back</section>
+            <section class="left">Left</section>
+            <section class="right">Right</section>
+            <section class="top">Top</section>
+            <section class="bottom">Bottom</section>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border: 1px solid gray;
+            width: 200px;
+            height: 250px;
+            margin: 100px auto;
+            padding: 20PX;
+        }
+        .sec{
+            background-color: lime;
+            color: white;
+            position: absolute;
+            padding: 10px;
+        }
+        .sec:hover{
+            background-color: green;
+        }
+        .sec:first-child{
+            top: 10px;
+            left: 100px;
+        }
+        .sec:nth-child(2){
+            top: 10px;
+            left: 170px;
+        }
+        .sec:nth-child(3){
+            top: 10px;
+            left: 260px;
+        }
+        .sec:nth-child(4){
+            top: 10px;
+            left: 345px;
+        }
+        
+        .sec:nth-child(5){
+            top: 10px;
+            left: 415px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .sec:first-child:hover ~.box{
+            background-color: brown;
+            position: static;
+            top: 50px;
+            left: 50px;
+        }
+        .sec:nth-child(2):hover ~.box{
+            background-color: brown;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- <main>
+        <section class="sec">Static</section>
+        <section class="sec">Absolute</section>
+        <section class="sec">Relative</section>
+        <section class="sec">Fixed</section>
+        <section class="sec">Sticky</section>
+        <section class="box"></section>
+    </main> -->
+    <table border="" cellpadding="" class="main">
+        <tr>
+            <td class="sec"></td>
+            <td class="sec"></td>
+            <td class="sec"></td>
+            <td class="sec"></td>
+            <td class="box"></td>
+        </tr>
+    </table>
+</body>
+</html>
