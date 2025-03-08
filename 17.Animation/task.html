@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagonal Zigzag Animation</title>
+    <style>
+
+        div {
+            margin-left: 500px;
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            animation-name: zigzag;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: relative;
+            border-radius: 20%;
+        }
+        @keyframes zigzag {
+            0% {
+                top: 0px;
+                left: 0px;
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                top: 200px;
+                left: 200px;
+                transform: rotate(180deg) scale(1.2);
+            }
+            50% {
+                top: 400px;
+                left: 0px;
+                transform: rotate(360deg) scale(0.8);
+            }
+            75% {
+                top: 200px;
+                left: -200px;
+                transform: rotate(180deg) scale(1.2);
+            }
+            100% {
+                top: 0px;
+                left: 0px;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+    </section>
+</body>
+</html>
