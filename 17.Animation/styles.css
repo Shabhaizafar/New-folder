@@ -80,6 +80,7 @@ span{
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: normal;
+    animation-timing-function: linear;
 }
 
 @keyframes box {
@@ -101,13 +102,33 @@ span{
         left: calc(100% - 5px);
     }
     50%{
-        top: 100%;
-        left: 100%;
+        width: 5px;
+        height: 100px;
+        top: calc(100% - 5px);
+        left: calc(100% - 5px);
+    }
+    53%{
+        width: 100px;
+        height: 5px;
+        top: calc(100% - 5px);
+        left: calc(100% - 5px);
     }
     75%{
-
+        width: 100px;
+        height: 100px;
+        top: calc(100% - 5px);
+        left: -95px;
+    }
+    98%{
+        width: 100px;
+        height: 100px;
+        top: 0px;
+        left: -95px;
     }
     100%{
-
+        width: 100px;
+        height: 5px;
+        top: 0px;
+        left: -100px;
     }
 }
